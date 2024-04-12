@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23D3E8A62BC8FADD00558C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8A52BC8FADD00558C22 /* AppDelegate.swift */; };
-		23D3E8A82BC8FADD00558C22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8A72BC8FADD00558C22 /* SceneDelegate.swift */; };
-		23D3E8AA2BC8FADD00558C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8A92BC8FADD00558C22 /* ViewController.swift */; };
-		23D3E8AD2BC8FADD00558C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E8AB2BC8FADD00558C22 /* Main.storyboard */; };
-		23D3E8AF2BC8FADE00558C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E8AE2BC8FADE00558C22 /* Assets.xcassets */; };
-		23D3E8B22BC8FADE00558C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E8B02BC8FADE00558C22 /* LaunchScreen.storyboard */; };
+		23D3E8642BC5C21200558C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8632BC5C21200558C22 /* AppDelegate.swift */; };
+		23D3E8662BC5C21200558C22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8652BC5C21200558C22 /* SceneDelegate.swift */; };
+		23D3E8682BC5C21200558C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D3E8672BC5C21200558C22 /* ViewController.swift */; };
+		23D3E86B2BC5C21200558C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E8692BC5C21200558C22 /* Main.storyboard */; };
+		23D3E86D2BC5C21300558C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E86C2BC5C21300558C22 /* Assets.xcassets */; };
+		23D3E8702BC5C21300558C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D3E86E2BC5C21300558C22 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23D3E8A22BC8FADD00558C22 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23D3E8A52BC8FADD00558C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		23D3E8A72BC8FADD00558C22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23D3E8A92BC8FADD00558C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23D3E8AC2BC8FADD00558C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23D3E8AE2BC8FADE00558C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23D3E8B12BC8FADE00558C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		23D3E8B32BC8FADE00558C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D3E8602BC5C21200558C22 /* baemin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baemin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D3E8632BC5C21200558C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23D3E8652BC5C21200558C22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		23D3E8672BC5C21200558C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		23D3E86A2BC5C21200558C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23D3E86C2BC5C21300558C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23D3E86F2BC5C21300558C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23D3E8712BC5C21300558C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		23D3E89F2BC8FADD00558C22 /* Frameworks */ = {
+		23D3E85D2BC5C21200558C22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +37,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23D3E8992BC8FADC00558C22 = {
+		23D3E8572BC5C21200558C22 = {
 			isa = PBXGroup;
 			children = (
-				23D3E8A42BC8FADD00558C22 /* baemin */,
-				23D3E8A32BC8FADD00558C22 /* Products */,
+				23D3E8622BC5C21200558C22 /* baemin */,
+				23D3E8612BC5C21200558C22 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		23D3E8A32BC8FADD00558C22 /* Products */ = {
+		23D3E8612BC5C21200558C22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23D3E8A22BC8FADD00558C22 /* baemin.app */,
+				23D3E8602BC5C21200558C22 /* baemin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		23D3E8A42BC8FADD00558C22 /* baemin */ = {
+		23D3E8622BC5C21200558C22 /* baemin */ = {
 			isa = PBXGroup;
 			children = (
-				23D3E8A52BC8FADD00558C22 /* AppDelegate.swift */,
-				23D3E8A72BC8FADD00558C22 /* SceneDelegate.swift */,
-				23D3E8A92BC8FADD00558C22 /* ViewController.swift */,
-				23D3E8AB2BC8FADD00558C22 /* Main.storyboard */,
-				23D3E8AE2BC8FADE00558C22 /* Assets.xcassets */,
-				23D3E8B02BC8FADE00558C22 /* LaunchScreen.storyboard */,
-				23D3E8B32BC8FADE00558C22 /* Info.plist */,
+				23D3E8632BC5C21200558C22 /* AppDelegate.swift */,
+				23D3E8652BC5C21200558C22 /* SceneDelegate.swift */,
+				23D3E8672BC5C21200558C22 /* ViewController.swift */,
+				23D3E8692BC5C21200558C22 /* Main.storyboard */,
+				23D3E86C2BC5C21300558C22 /* Assets.xcassets */,
+				23D3E86E2BC5C21300558C22 /* LaunchScreen.storyboard */,
+				23D3E8712BC5C21300558C22 /* Info.plist */,
 			);
 			path = baemin;
 			sourceTree = "<group>";
@@ -70,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23D3E8A12BC8FADD00558C22 /* baemin */ = {
+		23D3E85F2BC5C21200558C22 /* baemin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23D3E8B62BC8FADE00558C22 /* Build configuration list for PBXNativeTarget "baemin" */;
+			buildConfigurationList = 23D3E8742BC5C21300558C22 /* Build configuration list for PBXNativeTarget "baemin" */;
 			buildPhases = (
-				23D3E89E2BC8FADD00558C22 /* Sources */,
-				23D3E89F2BC8FADD00558C22 /* Frameworks */,
-				23D3E8A02BC8FADD00558C22 /* Resources */,
+				23D3E85C2BC5C21200558C22 /* Sources */,
+				23D3E85D2BC5C21200558C22 /* Frameworks */,
+				23D3E85E2BC5C21200558C22 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +84,25 @@
 			);
 			name = baemin;
 			productName = baemin;
-			productReference = 23D3E8A22BC8FADD00558C22 /* baemin.app */;
+			productReference = 23D3E8602BC5C21200558C22 /* baemin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		23D3E89A2BC8FADC00558C22 /* Project object */ = {
+		23D3E8582BC5C21200558C22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					23D3E8A12BC8FADD00558C22 = {
+					23D3E85F2BC5C21200558C22 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 23D3E89D2BC8FADC00558C22 /* Build configuration list for PBXProject "baemin" */;
+			buildConfigurationList = 23D3E85B2BC5C21200558C22 /* Build configuration list for PBXProject "baemin" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 23D3E8992BC8FADC00558C22;
-			productRefGroup = 23D3E8A32BC8FADD00558C22 /* Products */;
+			mainGroup = 23D3E8572BC5C21200558C22;
+			productRefGroup = 23D3E8612BC5C21200558C22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23D3E8A12BC8FADD00558C22 /* baemin */,
+				23D3E85F2BC5C21200558C22 /* baemin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		23D3E8A02BC8FADD00558C22 /* Resources */ = {
+		23D3E85E2BC5C21200558C22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D3E8B22BC8FADE00558C22 /* LaunchScreen.storyboard in Resources */,
-				23D3E8AF2BC8FADE00558C22 /* Assets.xcassets in Resources */,
-				23D3E8AD2BC8FADD00558C22 /* Main.storyboard in Resources */,
+				23D3E8702BC5C21300558C22 /* LaunchScreen.storyboard in Resources */,
+				23D3E86D2BC5C21300558C22 /* Assets.xcassets in Resources */,
+				23D3E86B2BC5C21200558C22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		23D3E89E2BC8FADD00558C22 /* Sources */ = {
+		23D3E85C2BC5C21200558C22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23D3E8AA2BC8FADD00558C22 /* ViewController.swift in Sources */,
-				23D3E8A62BC8FADD00558C22 /* AppDelegate.swift in Sources */,
-				23D3E8A82BC8FADD00558C22 /* SceneDelegate.swift in Sources */,
+				23D3E8682BC5C21200558C22 /* ViewController.swift in Sources */,
+				23D3E8642BC5C21200558C22 /* AppDelegate.swift in Sources */,
+				23D3E8662BC5C21200558C22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		23D3E8AB2BC8FADD00558C22 /* Main.storyboard */ = {
+		23D3E8692BC5C21200558C22 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				23D3E8AC2BC8FADD00558C22 /* Base */,
+				23D3E86A2BC5C21200558C22 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		23D3E8B02BC8FADE00558C22 /* LaunchScreen.storyboard */ = {
+		23D3E86E2BC5C21300558C22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				23D3E8B12BC8FADE00558C22 /* Base */,
+				23D3E86F2BC5C21300558C22 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		23D3E8B42BC8FADE00558C22 /* Debug */ = {
+		23D3E8722BC5C21300558C22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		23D3E8B52BC8FADE00558C22 /* Release */ = {
+		23D3E8732BC5C21300558C22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +280,7 @@
 			};
 			name = Release;
 		};
-		23D3E8B72BC8FADE00558C22 /* Debug */ = {
+		23D3E8752BC5C21300558C22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -292,6 +292,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,7 +309,7 @@
 			};
 			name = Debug;
 		};
-		23D3E8B82BC8FADE00558C22 /* Release */ = {
+		23D3E8762BC5C21300558C22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -319,6 +321,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -337,25 +341,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23D3E89D2BC8FADC00558C22 /* Build configuration list for PBXProject "baemin" */ = {
+		23D3E85B2BC5C21200558C22 /* Build configuration list for PBXProject "baemin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23D3E8B42BC8FADE00558C22 /* Debug */,
-				23D3E8B52BC8FADE00558C22 /* Release */,
+				23D3E8722BC5C21300558C22 /* Debug */,
+				23D3E8732BC5C21300558C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23D3E8B62BC8FADE00558C22 /* Build configuration list for PBXNativeTarget "baemin" */ = {
+		23D3E8742BC5C21300558C22 /* Build configuration list for PBXNativeTarget "baemin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				23D3E8B72BC8FADE00558C22 /* Debug */,
-				23D3E8B82BC8FADE00558C22 /* Release */,
+				23D3E8752BC5C21300558C22 /* Debug */,
+				23D3E8762BC5C21300558C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 23D3E89A2BC8FADC00558C22 /* Project object */;
+	rootObject = 23D3E8582BC5C21200558C22 /* Project object */;
 }
