@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  baemin
 //
-//  Created by 김미주 on 12/04/2024.
+//  Created by 김미주 on 10/04/2024.
 //
 
 import UIKit
