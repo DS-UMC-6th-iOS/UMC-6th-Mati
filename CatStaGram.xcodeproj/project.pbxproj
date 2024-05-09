@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		232562C02BE376BA005594B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232562BF2BE376BA005594B4 /* AppDelegate.swift */; };
 		232562C22BE376BA005594B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232562C12BE376BA005594B4 /* SceneDelegate.swift */; };
-		232562C42BE376BA005594B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232562C32BE376BA005594B4 /* ViewController.swift */; };
 		232562C72BE376BA005594B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 232562C62BE376BA005594B4 /* Base */; };
 		232562C92BE376BD005594B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 232562C82BE376BD005594B4 /* Assets.xcassets */; };
 		232562CC2BE376BD005594B4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 232562CB2BE376BD005594B4 /* Base */; };
+		232562D42BE37E29005594B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232562D32BE37E29005594B4 /* LoginViewController.swift */; };
+		232562D62BE38251005594B4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232562D52BE38251005594B4 /* RegisterViewController.swift */; };
+		239471062BE953E900FE4C8A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239471052BE953E900FE4C8A /* UIView+Extension.swift */; };
+		2394710A2BE955A600FE4C8A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239471092BE955A600FE4C8A /* UIViewController+Extension.swift */; };
+		23B26D912BED558900049A38 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B26D902BED558900049A38 /* UIColor+Extension.swift */; };
+		23B26D932BED5E0A00049A38 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B26D922BED5E0A00049A38 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		232562BC2BE376BA005594B4 /* CatStaGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatStaGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		232562BF2BE376BA005594B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		232562C12BE376BA005594B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		232562C32BE376BA005594B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		232562C62BE376BA005594B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		232562C82BE376BD005594B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		232562CB2BE376BD005594B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		232562CD2BE376BD005594B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232562D32BE37E29005594B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		232562D52BE38251005594B4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		239471052BE953E900FE4C8A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		239471092BE955A600FE4C8A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		23B26D902BED558900049A38 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		23B26D922BED5E0A00049A38 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 		232562BE2BE376BA005594B4 /* CatStaGram */ = {
 			isa = PBXGroup;
 			children = (
+				23B26D922BED5E0A00049A38 /* UserInfo.swift */,
+				23B26D902BED558900049A38 /* UIColor+Extension.swift */,
 				232562BF2BE376BA005594B4 /* AppDelegate.swift */,
 				232562C12BE376BA005594B4 /* SceneDelegate.swift */,
-				232562C32BE376BA005594B4 /* ViewController.swift */,
 				232562C52BE376BA005594B4 /* Main.storyboard */,
+				232562D52BE38251005594B4 /* RegisterViewController.swift */,
+				239471052BE953E900FE4C8A /* UIView+Extension.swift */,
+				239471092BE955A600FE4C8A /* UIViewController+Extension.swift */,
+				232562D32BE37E29005594B4 /* LoginViewController.swift */,
 				232562C82BE376BD005594B4 /* Assets.xcassets */,
 				232562CA2BE376BD005594B4 /* LaunchScreen.storyboard */,
 				232562CD2BE376BD005594B4 /* Info.plist */,
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				232562C42BE376BA005594B4 /* ViewController.swift in Sources */,
+				239471062BE953E900FE4C8A /* UIView+Extension.swift in Sources */,
+				232562D42BE37E29005594B4 /* LoginViewController.swift in Sources */,
 				232562C02BE376BA005594B4 /* AppDelegate.swift in Sources */,
+				2394710A2BE955A600FE4C8A /* UIViewController+Extension.swift in Sources */,
 				232562C22BE376BA005594B4 /* SceneDelegate.swift in Sources */,
+				232562D62BE38251005594B4 /* RegisterViewController.swift in Sources */,
+				23B26D932BED5E0A00049A38 /* UserInfo.swift in Sources */,
+				23B26D912BED558900049A38 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
