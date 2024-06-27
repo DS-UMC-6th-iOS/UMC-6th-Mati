@@ -1,5 +1,5 @@
 //
-//  FeedUploadInput.swift
+//  UserFeedModel.swift
 //  CatStaGram
 //
 //  Created by 김미주 on 28/06/2024.

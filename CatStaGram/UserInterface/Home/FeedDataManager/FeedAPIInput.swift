@@ -5,4 +5,7 @@
 //  Created by 김미주 on 27/06/2024.
 //
 
-import Foundation
+struct FeedAPIInput : Encodable {
+    var limit : Int?
+    var page: Int?
+}
