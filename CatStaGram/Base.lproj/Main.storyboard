@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NLm-iw-ymZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,7 +26,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tur-gv-oPg">
                                 <rect key="frame" x="10" y="409" width="373" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="passwordTextFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="2e4-84-SEi"/>
                                 </connections>
@@ -348,35 +348,60 @@
             </objects>
             <point key="canvasLocation" x="160" y="4"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="KUw-LL-7Sl">
             <objects>
-                <viewController id="xeZ-Ir-w2W" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="xeZ-Ir-w2W" customClass="ProfileViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K9T-qb-96c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-fd-kGv">
-                                <rect key="frame" x="161" y="411" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hKS-kG-MhF">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="swP-w8-F1z">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="1" minY="0.0" maxX="1" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oPZ-wN-auC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hKS-kG-MhF" firstAttribute="top" secondItem="oPZ-wN-auC" secondAttribute="top" id="3Fh-ke-Dfx"/>
+                            <constraint firstItem="oPZ-wN-auC" firstAttribute="trailing" secondItem="hKS-kG-MhF" secondAttribute="trailing" id="9fj-BB-GA6"/>
+                            <constraint firstItem="oPZ-wN-auC" firstAttribute="bottom" secondItem="hKS-kG-MhF" secondAttribute="bottom" id="M0S-6M-FH9"/>
+                            <constraint firstItem="hKS-kG-MhF" firstAttribute="leading" secondItem="oPZ-wN-auC" secondAttribute="leading" id="UVd-OP-UCO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="xdc-Wf-XLP"/>
+                    <navigationItem key="navigationItem" id="gVJ-Lm-Ox3">
+                        <barButtonItem key="leftBarButtonItem" title="Nickname" id="k8G-hg-jPa">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="line.horizontal.3" catalog="system" id="m0V-FP-jvL">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="plus.app" catalog="system" id="HHq-cg-YiU">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileCollectionView" destination="hKS-kG-MhF" id="DEr-vi-1mj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61a-GW-zf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1514" y="1413"/>
+            <point key="canvasLocation" x="2440.4580152671756" y="1412.6760563380283"/>
         </scene>
         <!--Home-->
         <scene sceneID="peB-3l-Mk3">
             <objects>
-                <viewController id="UU2-1Z-yig" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="UU2-1Z-yig" customClass="HomeViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fA7-kd-WZ2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,6 +441,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_home_upload"/>
+                                        <connections>
+                                            <action selector="buttonGoAlbum:" destination="UU2-1Z-yig" eventType="touchUpInside" id="awR-dO-rgX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -433,20 +461,69 @@
                                     <constraint firstItem="Umq-LV-VHO" firstAttribute="centerY" secondItem="m2C-xI-gKa" secondAttribute="centerY" id="uMW-0S-oNS"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-tD-iLo">
+                                <rect key="frame" x="0.0" y="109" width="393" height="660"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FrD-TJ-Vgu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pKD-tD-iLo" firstAttribute="leading" secondItem="FrD-TJ-Vgu" secondAttribute="leading" id="1HO-Cy-un9"/>
+                            <constraint firstItem="pKD-tD-iLo" firstAttribute="top" secondItem="m2C-xI-gKa" secondAttribute="bottom" id="KRg-F4-olq"/>
+                            <constraint firstItem="FrD-TJ-Vgu" firstAttribute="bottom" secondItem="pKD-tD-iLo" secondAttribute="bottom" id="M1o-Mu-mP1"/>
                             <constraint firstItem="m2C-xI-gKa" firstAttribute="top" secondItem="FrD-TJ-Vgu" secondAttribute="top" id="OwH-ZM-jpu"/>
+                            <constraint firstItem="FrD-TJ-Vgu" firstAttribute="trailing" secondItem="pKD-tD-iLo" secondAttribute="trailing" id="ZiP-m1-dxH"/>
                             <constraint firstItem="FrD-TJ-Vgu" firstAttribute="trailing" secondItem="m2C-xI-gKa" secondAttribute="trailing" id="cJB-lZ-QRB"/>
                             <constraint firstItem="m2C-xI-gKa" firstAttribute="leading" secondItem="FrD-TJ-Vgu" secondAttribute="leading" id="nOQ-Js-iP6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="JV5-Dq-gik"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="JV5-Dq-gik"/>
+                    <connections>
+                        <outlet property="tableView" destination="pKD-tD-iLo" id="hLP-z6-uaW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PG4-se-RMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159.54198473282443" y="1412.6760563380283"/>
+        </scene>
+        <!--릴스-->
+        <scene sceneID="gnJ-YX-LO6">
+            <objects>
+                <viewController storyboardIdentifier="ReelsVC" id="nhb-tj-fEx" customClass="ReelsViewController" customModule="CatStaGram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qch-48-AxE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N48-iu-GLB">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dmg-4a-tUP">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fZb-cv-Xn8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N48-iu-GLB" firstAttribute="leading" secondItem="fZb-cv-Xn8" secondAttribute="leading" id="3rI-JZ-8di"/>
+                            <constraint firstItem="fZb-cv-Xn8" firstAttribute="bottom" secondItem="N48-iu-GLB" secondAttribute="bottom" id="Hqz-Ou-4Rw"/>
+                            <constraint firstItem="N48-iu-GLB" firstAttribute="top" secondItem="fZb-cv-Xn8" secondAttribute="top" id="O1c-Ib-5xj"/>
+                            <constraint firstItem="fZb-cv-Xn8" firstAttribute="trailing" secondItem="N48-iu-GLB" secondAttribute="trailing" id="iYp-Lw-74z"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="릴스" id="QUr-Yo-H44"/>
+                    <connections>
+                        <outlet property="collectionView" destination="N48-iu-GLB" id="2Q7-Ah-CRu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXH-bg-OMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="1413"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6mc-OD-KQ0">
@@ -456,24 +533,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="UU2-1Z-yig" kind="relationship" relationship="viewControllers" id="yhc-UE-rfV"/>
-                        <segue destination="xeZ-Ir-w2W" kind="relationship" relationship="viewControllers" id="AEP-0i-dLv"/>
+                        <segue destination="nhb-tj-fEx" kind="relationship" relationship="viewControllers" id="I8v-Kp-OvE"/>
+                        <segue destination="BGR-jC-OMe" kind="relationship" relationship="viewControllers" id="AEP-0i-dLv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuQ-Hp-Fkc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="831" y="675"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="ff5-47-maK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BGR-jC-OMe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="xdc-Wf-XLP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Gj-1b-ucm">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xeZ-Ir-w2W" kind="relationship" relationship="rootViewController" id="Att-EG-zDd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3T-3A-XSs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1513.7404580152672" y="1412.6760563380283"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
-        <image name="f.square.fill" catalog="system" width="32" height="32"/>
+        <image name="f.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="ic_catstagram_logo" width="476" height="96"/>
         <image name="ic_home_heart" width="512" height="512"/>
         <image name="ic_home_send" width="512" height="512"/>
         <image name="ic_home_upload" width="512" height="512"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

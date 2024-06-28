@@ -51,9 +51,9 @@ class LoginViewController: UIViewController {
         if userInfo.email == self.email
             && userInfo.password == self.password {
             let vc = storyboard?.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-        } else {
+            
+            // 더 이상 사용하지 않을 화면을 없애기 위해 사용 (로그인 후에 메인 화면으로 넘어가면 로그인 화면은 필요없음)
+            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
         }
     }
     

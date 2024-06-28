@@ -11,11 +11,16 @@ class ProfileViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var profileCollectionView: UICollectionView!
     
+    var userPosts: [GetUserPosts]? {
+        didSet { self.profileCollectionView.reloadData() }
+    }
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        setupData()
     }
     
 
@@ -39,6 +44,10 @@ class ProfileViewController: UIViewController {
                   bundle: nil),
             forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
     }
+    
+    private func setupData() {
+        UserFeedDataManager().getUserFeed(self)
+    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -55,28 +64,38 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         case 0:
             return 1
         default:
-            return 24
+            return userPosts?.count ?? 0
         }
     }
     
-    // 셀 생성
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    // cell 생성
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let section = indexPath.section
         switch section {
-        case 0:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.identifier, for: indexPath) as? ProfileCollectionViewCell else {
-                // return UICollectionViewCell()
-                fatalError("셀 타입 캐스팅 실패...")
-            }
+        case 0: // Profile
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: ProfileCollectionViewCell.identifier,
+                for: indexPath) as? ProfileCollectionViewCell else {
+                    fatalError("샐 타입 캐스팅 실패...")
+                }
+            
             return cell
-        default:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell else {
-                // return UICollectionViewCell()
-                fatalError("셀 타입 캐스팅 실패...")
+        default: // Post
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: PostCollectionViewCell.identifier,
+                for: indexPath) as? PostCollectionViewCell else {
+                    fatalError("샐 타입 캐스팅 실패...")
+                }
+            let itemIndex = indexPath.item
+            
+            if let cellData = self.userPosts {
+                // 데이터가 있는 경우, cell 데이터를 전달
+                cell.setupData(cellData[itemIndex].postImgUrl)
             }
             return cell
         }
-        
     }
 }
 
@@ -111,5 +130,12 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         default:
             return CGFloat(1)
         }
+    }
+}
+
+// MARK: - API 통신 메소드
+extension ProfileViewController {
+    func successFeedAPI(_ result: UserFeedModel) {
+        self.userPosts = result.result?.getUserPosts
     }
 }
