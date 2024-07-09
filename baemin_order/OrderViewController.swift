@@ -8,22 +8,51 @@
 import UIKit
 
 class OrderViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    struct orderItem {
+        let name: String
+        let option: String
+        let price: String
+    }
+    
+    var data: [orderItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // navigationBar 없앰
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
 
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        let orderNib = UINib(nibName: "OrderTableViewCell", bundle: nil)
+        tableView.register(orderNib, forCellReuseIdentifier: "OrderTableViewCell")
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapBack(_ sender: Any) {
+        // 전 VC로 돌아가기
+        self.navigationController?.popViewController(animated: true)
     }
-    */
+    
+}
 
+extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as? OrderTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
 }

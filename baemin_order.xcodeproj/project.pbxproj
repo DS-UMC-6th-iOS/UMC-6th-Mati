@@ -13,6 +13,9 @@
 		235919C32BEE41DE009B6FDB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 235919C22BEE41DE009B6FDB /* Base */; };
 		235919C52BEE41DF009B6FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235919C42BEE41DF009B6FDB /* Assets.xcassets */; };
 		235919C82BEE41DF009B6FDB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 235919C72BEE41DF009B6FDB /* Base */; };
+		23E649622BF9D47E00A0D64E /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E649602BF9D47E00A0D64E /* OrderTableViewCell.swift */; };
+		23E649632BF9D47E00A0D64E /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E649612BF9D47E00A0D64E /* OrderTableViewCell.xib */; };
+		23E649652BFA78A400A0D64E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E649642BFA78A400A0D64E /* OrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		235919C42BEE41DF009B6FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235919C72BEE41DF009B6FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235919C92BEE41DF009B6FDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E649602BF9D47E00A0D64E /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		23E649612BF9D47E00A0D64E /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		23E649642BFA78A400A0D64E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				235919BD2BEE41DE009B6FDB /* SceneDelegate.swift */,
 				235919BF2BEE41DE009B6FDB /* ViewController.swift */,
 				235919C12BEE41DE009B6FDB /* Main.storyboard */,
+				23E649642BFA78A400A0D64E /* OrderViewController.swift */,
+				23E649602BF9D47E00A0D64E /* OrderTableViewCell.swift */,
+				23E649612BF9D47E00A0D64E /* OrderTableViewCell.xib */,
 				235919C42BEE41DF009B6FDB /* Assets.xcassets */,
 				235919C62BEE41DF009B6FDB /* LaunchScreen.storyboard */,
 				235919C92BEE41DF009B6FDB /* Info.plist */,
@@ -127,6 +136,7 @@
 			files = (
 				235919C52BEE41DF009B6FDB /* Assets.xcassets in Resources */,
 				235919C82BEE41DF009B6FDB /* Base in Resources */,
+				23E649632BF9D47E00A0D64E /* OrderTableViewCell.xib in Resources */,
 				235919C32BEE41DE009B6FDB /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				235919C02BEE41DE009B6FDB /* ViewController.swift in Sources */,
+				23E649652BFA78A400A0D64E /* OrderViewController.swift in Sources */,
 				235919BC2BEE41DE009B6FDB /* AppDelegate.swift in Sources */,
+				23E649622BF9D47E00A0D64E /* OrderTableViewCell.swift in Sources */,
 				235919BE2BEE41DE009B6FDB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,10 +8,20 @@
 import UIKit
 
 class OrderTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelOrder: UILabel!
+    @IBOutlet weak var labelOption: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var imgOrder: UIImageView!
+    @IBOutlet weak var btnOption: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        imgOrder.layer.cornerRadius = 10
+        btnOption.layer.cornerRadius = 5
+        btnOption.layer.borderWidth = 1
+        btnOption.layer.borderColor = UIColor.lightGray.cgColor
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
