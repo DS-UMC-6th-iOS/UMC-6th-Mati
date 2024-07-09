@@ -30,8 +30,8 @@ class WeatherService {
         }
     }
     
-    func getWeather(completion: @escaping (Result<WeatherResponse, NetworkError>) -> Void) {
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=\(apiKey)")
+    func getWeather(for city: String, completion: @escaping (Result<WeatherResponse, NetworkError>) -> Void) {
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=\(apiKey)&units=metric")
         guard let url = url else {
             return completion(.failure(.badUrl))
         }

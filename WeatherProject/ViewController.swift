@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        WeatherService().getWeather { result in
+        let city = "Paris"
+        WeatherService().getWeather(for: city) { result in
             switch result {
             case .success(let weatherResponse):
                 DispatchQueue.main.async {

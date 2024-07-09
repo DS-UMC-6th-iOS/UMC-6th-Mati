@@ -9,9 +9,14 @@ import UIKit
 
 class ListViewController: UIViewController {
     // MARK: - Properties
+    var weather: Weather?
+    var main: Main?
+    var name: String?
     @IBOutlet weak var tabelView: UITableView!
     
-    let data = ["1", "2", "3"]
+    let weatherService = WeatherService()
+    let data = ["Seoul", "London", "Paris", "Madrid", "Tokyo"]
+    var weatherData: [String: (weather: Weather?, main: Main?)] = [:]
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -19,6 +24,21 @@ class ListViewController: UIViewController {
         
         tabelView.delegate = self
         tabelView.dataSource = self
+        
+        // 각 도시의 날씨 데이터를 가져와서 저장
+        for city in data {
+            weatherService.getWeather(for: city) { result in
+                switch result {
+                case .success(let weatherResponse):
+                    DispatchQueue.main.async {
+                        self.weatherData[city] = (weatherResponse.weather.first, weatherResponse.main)
+                        self.tabelView.reloadData()
+                    }
+                case .failure(_ ):
+                    print("error")
+                }
+            }
+        }
         
         let listNib = UINib(nibName: "ListTableViewCell", bundle: nil)
         tabelView.register(listNib, forCellReuseIdentifier: "ListTableViewCell")
@@ -38,6 +58,21 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none
+        
+        let city = data[indexPath.row]
+        cell.locationLabel.text = city
+        
+        if let weatherData = self.weatherData[city], let main = weatherData.main {
+            cell.tempLabel.text = "\(main.temp)°C"
+            cell.minTempLabel.text = "최저: \(main.temp_min)°C"
+            cell.maxTempLabel.text = "최고: \(main.temp_max)°C"
+        } else {
+            cell.tempLabel.text = "N/A"
+            cell.minTempLabel.text = "N/A"
+            cell.maxTempLabel.text = "N/A"
+        }
+        
+        
         return cell
     }
     
@@ -46,7 +81,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("click")
         tableView.deselectRow(at: indexPath, animated: true)
         
         guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
