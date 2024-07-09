@@ -66,6 +66,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             cell.tempLabel.text = "\(main.temp)°C"
             cell.minTempLabel.text = "최저: \(main.temp_min)°C"
             cell.maxTempLabel.text = "최고: \(main.temp_max)°C"
+            
+            if weatherData.weather?.main == "Clear" {
+                cell.contentView.backgroundColor = UIColor(red: CGFloat(128)/255, green: CGFloat(196)/255, blue: CGFloat(233)/255, alpha: 1)
+            }
         } else {
             cell.tempLabel.text = "N/A"
             cell.minTempLabel.text = "N/A"

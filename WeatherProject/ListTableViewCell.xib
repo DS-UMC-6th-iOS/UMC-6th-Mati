@@ -45,7 +45,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ikw-lw-MOg" secondAttribute="bottom" constant="20" id="2aw-wT-R71"/>
                             <constraint firstAttribute="bottom" secondItem="ddY-YK-exC" secondAttribute="bottom" constant="20" id="6QP-TS-O0a"/>
@@ -79,9 +78,6 @@
     <resources>
         <systemColor name="systemGray2Color">
             <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
