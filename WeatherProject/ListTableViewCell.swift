@@ -8,7 +8,13 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-
+    // MARK: - Properties
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
+    
+    // MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,10 @@ class ListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10))
+        contentView.layer.cornerRadius = 10
+    }
+
 }
