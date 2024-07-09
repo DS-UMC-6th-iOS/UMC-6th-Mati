@@ -35,21 +35,7 @@ class OrderViewController: UIViewController {
         let orderNib = UINib(nibName: "OrderTableViewCell", bundle: nil)
         tableView.register(orderNib, forCellReuseIdentifier: "OrderTableViewCell")
         
-        // 3자리마다 , 붙이기
-        let numberFormatter: NumberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.groupingSeparator = ","
-        numberFormatter.groupingSize = 3
-        numberFormatter.maximumFractionDigits = 0
-        
-        sizePrice = (selectedSize=="M") ? "20,000원" : "23,000원"
-        
-        calcPrice += (selectedSize == "M") ? 20000 : 30000
-        calcPrice += (selectedDough == true) ? 4500 : 0
-        selectedPrice = numberFormatter.string(from: NSNumber(value: calcPrice))
-        
-        let newItem = orderItem(size: selectedSize, dough: selectedDough, price: selectedPrice)
-        data.append(newItem)
+        tableView.reloadData()
     }
     
     @IBAction func tapBack(_ sender: Any) {
@@ -71,8 +57,9 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         let item = data[indexPath.row]
-        cell.labelOptionPrice.text = "• 가격 : \(item.size ?? "") (\(self.sizePrice ?? ""))"
-        if selectedDough == true {
+        let sizePrice = (item.size == "M") ? "20,000원" : "23,000원"
+        cell.labelOptionPrice.text = "• 가격 : \(item.size ?? "") (\(sizePrice))"
+        if item.dough == true {
             cell.labelOptionDough.layer.isHidden = false
             cell.labelOptionDough.text = "• 도우변경 : 크림리치골드 크러스트 (4,500원)"
         }
