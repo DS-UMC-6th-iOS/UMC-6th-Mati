@@ -49,16 +49,15 @@ class ViewController: UIViewController {
         numberFormatter.groupingSize = 3
         numberFormatter.maximumFractionDigits = 0
         
-        let sizePrice = (size == "M") ? "20,000원" : "23,000원"
         var calcPrice = (size == "M") ? 20000 : 23000
         calcPrice += (dough == true) ? 4500 : 0
         let selectedPrice = numberFormatter.string(from: NSNumber(value: calcPrice))
         
-        // 새로운 주문 항목을 생성하여 배열에 추가합니다.
+        // 새로운 주문 항목을 생성하여 배열에 추가
         let newItem = OrderViewController.orderItem(size: size, dough: dough, price: selectedPrice)
         orderData.append(newItem)
         
-        // 배열을 OrderViewController에 전달합니다.
+        // 배열을 OrderViewController에 전달
         orderVC.data = orderData
         
         self.navigationController?.pushViewController(orderVC, animated: true)

@@ -64,10 +64,20 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
             cell.labelOptionDough.text = "• 도우변경 : 크림리치골드 크러스트 (4,500원)"
         }
         cell.labelPrice.text = "\(item.price ?? "" )원"
+        
+        cell.deleteAction = { [weak self] in
+            self?.deleteOrder(at: indexPath.row)
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func deleteOrder(at index: Int) {
+        data.remove(at: index)
+        tableView.reloadData()
     }
 }

@@ -14,6 +14,9 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var imgOrder: UIImageView!
     @IBOutlet weak var btnOption: UIButton!
+    @IBOutlet weak var btnDelete: UIButton!
+    
+    var deleteAction: (()->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +27,14 @@ class OrderTableViewCell: UITableViewCell {
         btnOption.layer.borderColor = UIColor.lightGray.cgColor
         
         labelOptionDough.layer.isHidden = true
+        
+        btnDelete.addTarget(self, action: #selector(btnDeleteTapped), for: .touchUpInside)
     }
+    
+    @IBAction func btnDeleteTapped(_ sender: Any) {
+        deleteAction?()
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
