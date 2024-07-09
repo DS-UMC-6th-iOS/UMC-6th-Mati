@@ -17,14 +17,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="357" height="176"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[재주문 1위]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-VJ-nbl">
-                        <rect key="frame" x="15" y="15" width="85" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[재주문 1위] 바싹불고기피자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-VJ-nbl">
+                        <rect key="frame" x="15" y="15" width="192" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="takeoutbag.and.cup.and.straw.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kmg-j1-mt5">
-                        <rect key="frame" x="15" y="45.333333333333336" width="80" height="82.333333333333343"/>
+                        <rect key="frame" x="15" y="50.333333333333336" width="80" height="82.333333333333343"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <color key="tintColor" red="0.96862745289999996" green="0.97254902119999997" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -32,15 +32,15 @@
                             <constraint firstAttribute="height" constant="80" id="S3S-h7-kLn"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 옵션" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-uS-SQF">
-                        <rect key="frame" x="110" y="46" width="37" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 가격" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgs-uS-SQF">
+                        <rect key="frame" x="110" y="51" width="34.666666666666657" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWn-FC-Yvf">
-                        <rect key="frame" x="110" y="79" width="28" height="19.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <rect key="frame" x="110" y="92" width="29.666666666666657" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -64,6 +64,12 @@
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 도우변경" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lD-Al-YOX">
+                        <rect key="frame" x="110" y="68" width="59" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="mtA-VJ-nbl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="18S-O5-SdU"/>
@@ -72,12 +78,14 @@
                     <constraint firstItem="kmg-j1-mt5" firstAttribute="leading" secondItem="mtA-VJ-nbl" secondAttribute="leading" id="7rV-Oe-djJ"/>
                     <constraint firstItem="cWn-FC-Yvf" firstAttribute="leading" secondItem="qgs-uS-SQF" secondAttribute="leading" id="8L6-Hr-ZIX"/>
                     <constraint firstItem="S5t-d8-ikx" firstAttribute="leading" secondItem="ep4-zd-bWf" secondAttribute="trailing" constant="10" id="A2J-5p-X5M"/>
-                    <constraint firstItem="cWn-FC-Yvf" firstAttribute="top" secondItem="qgs-uS-SQF" secondAttribute="bottom" constant="15" id="KdS-NS-mMC"/>
+                    <constraint firstItem="5lD-Al-YOX" firstAttribute="top" secondItem="qgs-uS-SQF" secondAttribute="bottom" id="AWH-8F-oxM"/>
+                    <constraint firstItem="cWn-FC-Yvf" firstAttribute="top" secondItem="5lD-Al-YOX" secondAttribute="bottom" constant="7" id="KdS-NS-mMC"/>
                     <constraint firstItem="qgs-uS-SQF" firstAttribute="leading" secondItem="kmg-j1-mt5" secondAttribute="trailing" constant="15" id="QRj-kI-2qD"/>
                     <constraint firstItem="mtA-VJ-nbl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="RJL-3K-3Ty"/>
-                    <constraint firstItem="kmg-j1-mt5" firstAttribute="top" secondItem="mtA-VJ-nbl" secondAttribute="bottom" constant="10" id="TdY-QQ-X30"/>
+                    <constraint firstItem="kmg-j1-mt5" firstAttribute="top" secondItem="mtA-VJ-nbl" secondAttribute="bottom" constant="15" id="TdY-QQ-X30"/>
                     <constraint firstItem="ep4-zd-bWf" firstAttribute="centerY" secondItem="S5t-d8-ikx" secondAttribute="centerY" id="W0k-WQ-YDC"/>
                     <constraint firstItem="S5t-d8-ikx" firstAttribute="trailing" secondItem="XxA-Ar-k18" secondAttribute="trailing" id="fNB-T3-GI8"/>
+                    <constraint firstItem="5lD-Al-YOX" firstAttribute="leading" secondItem="qgs-uS-SQF" secondAttribute="leading" id="hxD-UJ-7D9"/>
                     <constraint firstItem="XxA-Ar-k18" firstAttribute="top" secondItem="mtA-VJ-nbl" secondAttribute="top" id="jn2-SL-U02"/>
                     <constraint firstItem="qgs-uS-SQF" firstAttribute="top" secondItem="kmg-j1-mt5" secondAttribute="top" id="p34-fV-tCI"/>
                 </constraints>
@@ -86,11 +94,12 @@
             <connections>
                 <outlet property="btnOption" destination="ep4-zd-bWf" id="rss-cU-xGs"/>
                 <outlet property="imgOrder" destination="kmg-j1-mt5" id="Oth-zK-Ddf"/>
-                <outlet property="labelOption" destination="qgs-uS-SQF" id="mfP-Kb-5JB"/>
+                <outlet property="labelOptionDough" destination="5lD-Al-YOX" id="ylZ-Kn-8OV"/>
+                <outlet property="labelOptionPrice" destination="qgs-uS-SQF" id="L1v-bS-FkG"/>
                 <outlet property="labelOrder" destination="mtA-VJ-nbl" id="twN-3v-fMQ"/>
                 <outlet property="labelPrice" destination="cWn-FC-Yvf" id="tab-4G-oiq"/>
             </connections>
-            <point key="canvasLocation" x="158.01526717557252" y="33.098591549295776"/>
+            <point key="canvasLocation" x="400.76335877862596" y="-27.464788732394368"/>
         </tableViewCell>
     </objects>
     <resources>

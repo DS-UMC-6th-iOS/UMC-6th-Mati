@@ -9,7 +9,8 @@ import UIKit
 
 class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var labelOrder: UILabel!
-    @IBOutlet weak var labelOption: UILabel!
+    @IBOutlet weak var labelOptionPrice: UILabel!
+    @IBOutlet weak var labelOptionDough: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var imgOrder: UIImageView!
     @IBOutlet weak var btnOption: UIButton!
@@ -22,6 +23,7 @@ class OrderTableViewCell: UITableViewCell {
         btnOption.layer.borderWidth = 1
         btnOption.layer.borderColor = UIColor.lightGray.cgColor
         
+        labelOptionDough.layer.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
