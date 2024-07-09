@@ -84,6 +84,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         
         guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        detailVC.city = data[indexPath.row]
         detailVC.modalTransitionStyle = .coverVertical
         self.present(detailVC, animated: true, completion: nil)
     }

@@ -12,15 +12,17 @@ class ViewController: UIViewController {
     var weather: Weather?
     var main: Main?
     var name: String?
+    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var iconImageVIew: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     @IBOutlet weak var minTempLabel: UILabel!
     @IBOutlet weak var maxTempLabel: UILabel!
     
+    var city: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let city = "Paris"
         WeatherService().getWeather(for: city) { result in
             switch result {
             case .success(let weatherResponse):
@@ -43,9 +45,10 @@ class ViewController: UIViewController {
             iconImageVIew.image = UIImage(data: data)
         }
         
-        tempLabel.text = "\(main!.temp)"
-        minTempLabel.text = "\(main!.temp_min)"
-        maxTempLabel.text = "\(main!.temp_max)"
+        cityLabel.text = city
+        tempLabel.text = "\(main!.temp)°C"
+        minTempLabel.text = "최저: \(main!.temp_min)°C"
+        maxTempLabel.text = "최고: \(main!.temp_max)°C"
     }
 }
 

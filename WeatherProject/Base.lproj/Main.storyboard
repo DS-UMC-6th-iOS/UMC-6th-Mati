@@ -54,27 +54,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dls-W8-H7Z">
-                                <rect key="frame" x="96.666666666666686" y="209" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Wq8-A8-VsG"/>
-                                    <constraint firstAttribute="width" constant="200" id="fzD-b0-xhC"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 온도" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofn-ps-xyF">
-                                <rect key="frame" x="164.66666666666666" y="429" width="64" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="150.33333333333334" y="459" width="92.333333333333343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js4-5g-RL2">
-                                <rect key="frame" x="231.66666666666666" y="459" width="29.999999999999972" height="21"/>
+                                <rect key="frame" x="251.66666666666663" y="519" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-NI-dDC">
+                                <rect key="frame" x="174.66666666666666" y="79" width="44" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kvc-6t-if3">
+                                <rect key="frame" x="146.66666666666666" y="309" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="p19-1Y-fEe"/>
+                                    <constraint firstAttribute="height" constant="100" id="tBo-BL-kjV"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-af-0EZ">
-                                <rect key="frame" x="131.66666666666666" y="459" width="30" height="21"/>
+                                <rect key="frame" x="111.66666666666667" y="519" width="30.000000000000014" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,18 +89,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jDV-af-0EZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-70" id="0AX-rl-h0g"/>
                             <constraint firstItem="Ofn-ps-xyF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5IZ-FT-31U"/>
-                            <constraint firstItem="js4-5g-RL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="6Xk-Ew-w8Q"/>
-                            <constraint firstItem="Ofn-ps-xyF" firstAttribute="top" secondItem="dls-W8-H7Z" secondAttribute="bottom" constant="20" id="AmY-I9-YXh"/>
-                            <constraint firstItem="jDV-af-0EZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="HFT-6d-gWS"/>
-                            <constraint firstItem="dls-W8-H7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Nby-va-LaT"/>
-                            <constraint firstItem="jDV-af-0EZ" firstAttribute="top" secondItem="dls-W8-H7Z" secondAttribute="bottom" constant="50" id="d5h-S7-uvI"/>
-                            <constraint firstItem="js4-5g-RL2" firstAttribute="top" secondItem="dls-W8-H7Z" secondAttribute="bottom" constant="50" id="f1N-vW-ssp"/>
-                            <constraint firstItem="dls-W8-H7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pTx-xj-DsM"/>
+                            <constraint firstItem="kvc-6t-if3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ga-lJ-N44"/>
+                            <constraint firstItem="Ofn-ps-xyF" firstAttribute="top" secondItem="kvc-6t-if3" secondAttribute="bottom" constant="50" id="DT2-oO-d8d"/>
+                            <constraint firstItem="js4-5g-RL2" firstAttribute="top" secondItem="Ofn-ps-xyF" secondAttribute="bottom" constant="30" id="N88-Jg-ugX"/>
+                            <constraint firstItem="Nes-NI-dDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHd-21-FEe"/>
+                            <constraint firstItem="Nes-NI-dDC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cAG-1l-fdg"/>
+                            <constraint firstItem="js4-5g-RL2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="70" id="gnK-Dl-bCS"/>
+                            <constraint firstItem="jDV-af-0EZ" firstAttribute="top" secondItem="Ofn-ps-xyF" secondAttribute="bottom" constant="30" id="nm3-C5-hUd"/>
+                            <constraint firstItem="kvc-6t-if3" firstAttribute="top" secondItem="Nes-NI-dDC" secondAttribute="bottom" constant="200" id="xJk-CD-eUM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="iconImageVIew" destination="dls-W8-H7Z" id="jPk-dF-xmL"/>
+                        <outlet property="cityLabel" destination="Nes-NI-dDC" id="gnZ-jy-hoc"/>
+                        <outlet property="iconImageVIew" destination="kvc-6t-if3" id="fPZ-hV-PHM"/>
                         <outlet property="maxTempLabel" destination="js4-5g-RL2" id="PWj-Ep-MLV"/>
                         <outlet property="minTempLabel" destination="jDV-af-0EZ" id="EMW-nw-woG"/>
                         <outlet property="tempLabel" destination="Ofn-ps-xyF" id="kvd-zm-tRX"/>
